@@ -14,3 +14,10 @@
 *.tmp
 *.bak
 *.log
+
+# Node.js
+node_modules/
+
+# VitePress
+.vitepress/dist/
+.vitepress/cache/
