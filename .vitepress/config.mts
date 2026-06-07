@@ -10,6 +10,17 @@ export default defineConfig({
   // README.md 仅作为 Gitee 仓库主页展示
   srcExclude: ['README.md', 'node_modules/**'],
 
+  // URL 重写：源文件保留中文名（仓库友好），博客 URL 用英文（分享友好）
+  rewrites: {
+    '01-快速入门.md': 'guide/quick-start.md',
+    '02-完整规则.md': 'guide/rules.md',
+    '03-暗流涌动角色详解.md': 'guide/roles.md',
+    '04-新手策略与误区.md': 'guide/strategy.md',
+    '05-学习资源.md': 'guide/resources.md',
+    '06-术语速查表.md': 'guide/glossary.md',
+    '游戏复盘.md': 'replays/001.md',
+  },
+
   cleanUrls: true,
   lastUpdated: true,
 
@@ -20,13 +31,13 @@ export default defineConfig({
       {
         text: '血染钟楼',
         items: [
-          { text: '快速入门', link: '/01-快速入门' },
-          { text: '完整规则', link: '/02-完整规则' },
-          { text: '暗流涌动角色详解', link: '/03-暗流涌动角色详解' },
-          { text: '新手策略与误区', link: '/04-新手策略与误区' },
-          { text: '学习资源', link: '/05-学习资源' },
-          { text: '术语速查表', link: '/06-术语速查表' },
-          { text: '游戏复盘', link: '/游戏复盘' },
+          { text: '快速入门', link: '/guide/quick-start' },
+          { text: '完整规则', link: '/guide/rules' },
+          { text: '暗流涌动角色详解', link: '/guide/roles' },
+          { text: '新手策略与误区', link: '/guide/strategy' },
+          { text: '学习资源', link: '/guide/resources' },
+          { text: '术语速查表', link: '/guide/glossary' },
+          { text: '第 1 局复盘', link: '/replays/001' },
         ],
       },
       { text: '关于', link: '/about' },
@@ -39,19 +50,19 @@ export default defineConfig({
           text: '血染钟楼 · 入门指南',
           collapsed: false,
           items: [
-            { text: '01 · 快速入门', link: '/01-快速入门' },
-            { text: '02 · 完整规则', link: '/02-完整规则' },
-            { text: '03 · 暗流涌动角色详解', link: '/03-暗流涌动角色详解' },
-            { text: '04 · 新手策略与误区', link: '/04-新手策略与误区' },
-            { text: '05 · 学习资源', link: '/05-学习资源' },
-            { text: '06 · 术语速查表', link: '/06-术语速查表' },
+            { text: '01 · 快速入门', link: '/guide/quick-start' },
+            { text: '02 · 完整规则', link: '/guide/rules' },
+            { text: '03 · 暗流涌动角色详解', link: '/guide/roles' },
+            { text: '04 · 新手策略与误区', link: '/guide/strategy' },
+            { text: '05 · 学习资源', link: '/guide/resources' },
+            { text: '06 · 术语速查表', link: '/guide/glossary' },
           ],
         },
         {
           text: '血染钟楼 · 实战复盘',
           collapsed: false,
           items: [
-            { text: '第 1 局 · 暗流涌动 13 人', link: '/游戏复盘' },
+            { text: '第 1 局 · 暗流涌动 13 人', link: '/replays/001' },
           ],
         },
         {
@@ -66,7 +77,7 @@ export default defineConfig({
 
     // 站点其他配置
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/' },
+      { icon: 'github', link: 'https://github.com/mmqqdd/botc-learning-notes' },
     ],
 
     outline: {
@@ -105,7 +116,7 @@ export default defineConfig({
     },
 
     footer: {
-      message: '基于 VitePress 构建 · 仓库托管于 Gitee',
+      message: '基于 VitePress 构建 · 仓库托管于 Gitee / GitHub',
       copyright: '© 2026 孟强定',
     },
   },
