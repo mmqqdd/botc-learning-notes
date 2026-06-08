@@ -116,7 +116,7 @@ export default defineConfig({
     },
 
     footer: {
-      message: '基于 VitePress 构建 · 仓库托管于 Gitee / GitHub',
+      message: '基于 VitePress 构建 · 双部署（Cloudflare Pages 国内 + Vercel 国际）',
       copyright: '© 2026 孟强定',
     },
   },

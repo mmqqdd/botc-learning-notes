@@ -35,8 +35,12 @@
 ## 关于这个站点本身
 
 - **构建工具**：[VitePress](https://vitepress.dev/)
-- **源代码托管**：[Gitee · botc-learning-notes](https://gitee.com/mengqiangding/botc-learning-notes)（中文圈分享）+ GitHub（用于自动构建部署）
-- **部署**：Vercel 自动构建
+- **源代码托管**：
+  - [Gitee · botc-learning-notes](https://gitee.com/mengqiangding/botc-learning-notes)（中文圈分享）
+  - [GitHub · botc-learning-notes](https://github.com/mmqqdd/botc-learning-notes)（用于自动构建部署）
+- **部署**（双部署，国内国际都能访问）：
+  - 🇨🇳 [Cloudflare Pages](https://botc-learning-notes.pages.dev/) — 国内推荐，无需 VPN
+  - 🌍 [Vercel](https://botc-learning-notes.vercel.app/) — 国际线路
 - **可以转载吗？** 可以。带上来源链接就行。
 
 ## 联系我
