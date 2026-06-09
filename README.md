@@ -2,9 +2,8 @@
 
 > 给玩过狼人杀和阿瓦隆的你
 
-🔗 **在线阅读**：
-- 🇨🇳 国内推荐 → [botc-learning-notes.pages.dev](https://botc-learning-notes.pages.dev)（Cloudflare Pages，无需 VPN）
-- 🌍 国际线路 → [botc-learning-notes.vercel.app](https://botc-learning-notes.vercel.app)（Vercel）
+🔗 **在线阅读**：[botc-learning-notes.pages.dev](https://botc-learning-notes.pages.dev)
+（Cloudflare Pages 部署，国内国外都能访问、无需 VPN）
 
 ---
 

@@ -116,7 +116,7 @@ export default defineConfig({
     },
 
     footer: {
-      message: '基于 VitePress 构建 · 双部署（Cloudflare Pages 国内 + Vercel 国际）',
+      message: '基于 VitePress 构建 · 部署于 Cloudflare Pages',
       copyright: '© 2026 孟强定',
     },
   },
