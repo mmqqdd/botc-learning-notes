@@ -32,6 +32,12 @@
 - 引用的视频/网站会注明来源
 - 错误欢迎指正
 
+## 图片版权说明
+
+本站使用的**血染钟楼角色图标**来源于 [bra1n/townsquare](https://github.com/bra1n/townsquare)（一个被广泛使用的 BotC 网络版工具）与官方素材。角色图标、角色名、剧本设计等版权均归 **The Pandemonium Institute** 所有。
+
+本站仅作个人学习与笔记记录之用，**非商业用途**。如版权方需要下架任何素材，请通过下方邮箱联系。
+
 ## 关于这个站点本身
 
 - **构建工具**：[VitePress](https://vitepress.dev/)

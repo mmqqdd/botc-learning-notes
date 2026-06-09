@@ -5,6 +5,9 @@ hero:
   name: "孟强定的笔记本"
   text: "学习、复盘、思考的归档地"
   tagline: 把每一次学习沉淀成可以反复读的文字。
+  image:
+    src: /roles/imp.png
+    alt: 血染钟楼
   actions:
     - theme: brand
       text: 血染钟楼新手指南
