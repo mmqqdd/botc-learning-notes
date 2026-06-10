@@ -49,3 +49,57 @@
 > **第一局别想着赢，专心搞清楚"今晚发生了什么、为什么这个信息是这样"——血钟的乐趣 80% 来自于解谜，剩下 20% 来自于发现"我居然被骗成这样"。**
 
 祝玩得开心！🕰️
+
+---
+
+## 附录：如何扩展角色图片
+
+> 写给以后想 fork 这个仓库做自己笔记的人，也包括半年后忘了流程的我自己。
+
+角色头像统一从 [`bra1n/townsquare`](https://github.com/bra1n/townsquare) 取——一个被广泛使用、获官方授权的 BotC 网络版开源工具，icon 库覆盖所有主流剧本，文件命名规范、统一画风、透明背景。
+
+### 1. 文件命名规则
+
+文件名一律 **英文小写、无空格、无下划线**。比如：
+
+| 中文名 | 英文 | 文件名 |
+|---|---|---|
+| 占卜师 | Fortune Teller | `fortuneteller.png` |
+| 红唇女郎 | Scarlet Woman | `scarletwoman.png` |
+| 守鸦人 | Ravenkeeper | `ravenkeeper.png` |
+
+完整文件列表在 [src/assets/icons/](https://github.com/bra1n/townsquare/tree/develop/src/assets/icons)。
+
+### 2. 批量下载到 `public/roles/`
+
+```bash
+mkdir -p public/roles && cd public/roles
+
+# 列出你想要的角色英文名（空格分隔）
+for role in washerwoman investigator empath undertaker ravenkeeper \
+            slayer mayor librarian chef fortuneteller monk virgin soldier \
+            butler recluse drunk saint \
+            poisoner scarletwoman spy baron imp; do
+  code=$(curl -sL -w "%{http_code}" -o "${role}.png" \
+    "https://raw.githubusercontent.com/bra1n/townsquare/develop/src/assets/icons/${role}.png")
+  size=$(wc -c < "${role}.png" | tr -d ' ')
+  echo "${role}: HTTP=${code} size=${size}"
+done
+```
+
+输出每个文件的 HTTP 状态码 + 大小——HTTP=200 + size > 10KB 才算成功；遇到 404 就说明文件名拼错了，去 icons 目录核对。
+
+### 3. 在 Markdown 中嵌入（当前博客的标准格式）
+
+```html
+<img src="/roles/imp.png" width="80" alt="小恶魔" style="float:left;margin:0 16px 8px 0" />
+```
+
+- `width="80"` —— 角色详解页的标准尺寸
+- `float: left` + `margin` —— 让文字在右侧环绕，节省垂直空间
+
+VitePress 的 `public/` 目录会被原样发布到站点根路径，所以路径就是 `/roles/xxx.png`，无需 `../public/` 这种相对路径。
+
+### 4. 版权说明
+
+图标版权归 **The Pandemonium Institute** 所有。本仓库仅作个人学习记录之用，非商用。如果你 fork 后做了商用，请联系版权方获得授权。
