@@ -8,7 +8,8 @@ export default defineConfig({
 
   // 让 README.md 在博客构建中被忽略（首页用 index.md）
   // README.md 仅作为 Gitee 仓库主页展示
-  srcExclude: ['README.md', 'node_modules/**'],
+  // botc-kb/** 是给 AI 知识库用的，不发布到博客
+  srcExclude: ['README.md', 'node_modules/**', 'botc-kb/**'],
 
   // URL 重写：源文件保留中文名（仓库友好），博客 URL 用英文（分享友好）
   rewrites: {
