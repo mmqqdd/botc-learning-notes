@@ -14,10 +14,12 @@ export default defineConfig({
   rewrites: {
     '01-快速入门.md': 'guide/quick-start.md',
     '02-完整规则.md': 'guide/rules.md',
-    '03-暗流涌动角色详解.md': 'guide/roles.md',
+    '03-暗流涌动角色详解.md': 'scripts/trouble-brewing.md',
     '04-新手策略与误区.md': 'guide/strategy.md',
     '05-学习资源.md': 'guide/resources.md',
     '06-术语速查表.md': 'guide/glossary.md',
+    '07-横行霸道角色详解.md': 'scripts/outed-evil.md',
+    '08-横行霸道实战指南.md': 'scripts/outed-evil-guide.md',
     '游戏复盘.md': 'replays/001.md',
   },
 
@@ -29,15 +31,27 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       {
-        text: '血染钟楼',
+        text: '入门指南',
         items: [
           { text: '快速入门', link: '/guide/quick-start' },
           { text: '完整规则', link: '/guide/rules' },
-          { text: '暗流涌动角色详解', link: '/guide/roles' },
           { text: '新手策略与误区', link: '/guide/strategy' },
           { text: '学习资源', link: '/guide/resources' },
           { text: '术语速查表', link: '/guide/glossary' },
-          { text: '第 1 局复盘', link: '/replays/001' },
+        ],
+      },
+      {
+        text: '剧本',
+        items: [
+          { text: '暗流涌动 (TB) · 官方', link: '/scripts/trouble-brewing' },
+          { text: '横行霸道 (Outed Evil) · 民间', link: '/scripts/outed-evil' },
+          { text: '└ 横行霸道实战指南', link: '/scripts/outed-evil-guide' },
+        ],
+      },
+      {
+        text: '复盘',
+        items: [
+          { text: '第 1 局 · 暗流涌动 13 人', link: '/replays/001' },
         ],
       },
       { text: '关于', link: '/about' },
@@ -52,10 +66,18 @@ export default defineConfig({
           items: [
             { text: '01 · 快速入门', link: '/guide/quick-start' },
             { text: '02 · 完整规则', link: '/guide/rules' },
-            { text: '03 · 暗流涌动角色详解', link: '/guide/roles' },
             { text: '04 · 新手策略与误区', link: '/guide/strategy' },
             { text: '05 · 学习资源', link: '/guide/resources' },
             { text: '06 · 术语速查表', link: '/guide/glossary' },
+          ],
+        },
+        {
+          text: '血染钟楼 · 剧本',
+          collapsed: false,
+          items: [
+            { text: '暗流涌动 (TB) — 官方 / 入门', link: '/scripts/trouble-brewing' },
+            { text: '横行霸道 (Outed Evil) — 民间 / 世界杯', link: '/scripts/outed-evil' },
+            { text: '└ 横行霸道实战指南', link: '/scripts/outed-evil-guide' },
           ],
         },
         {
